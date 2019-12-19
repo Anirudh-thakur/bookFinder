@@ -11,3 +11,10 @@ body
     color:rebeccapurple;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+#mainContainer
+{
+    margin-top: 70px;
+}
+#result
+{
+}
