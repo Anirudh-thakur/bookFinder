@@ -48,12 +48,15 @@ h1
     padding: 8px 0;
     position: absolute;
     z-index: 1;
+    opacity: 0.8;
     /*
     bottom: 125%;
     left: 100%;
    margin-left: 80px;
     margin-top: 300px !important;
     */
+    margin-left: -200px;
+    margin-top:15px;
   }
   
   /* Popup arrow */

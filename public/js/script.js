@@ -6,6 +6,7 @@ function bookFinder()
    var bookResult = document.getElementById("result") 
 
     //remove existing content on page
+   // $(bookResult).remove();
 
    //AJAX request to book API
    $.ajax({
