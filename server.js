@@ -41,7 +41,7 @@ app.get('/contact',(req,res) =>
 );
 
 //listen to port
-app.listen(3000, () =>
+app.listen(port, () =>
 {
  // console.log('Server is running on port ${port}');
   
