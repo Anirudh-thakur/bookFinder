@@ -24,6 +24,7 @@ function bookFinder()
          WrapperDiv = document.createElement("div");
          WrapperDiv.className = "media";
          WrapperDiv.style.marginTop = "50px";
+         WrapperDiv.title = "Click to know more";
          // creating image
         var image = document.createElement('img');
         image.src = book.items[i].volumeInfo.imageLinks.thumbnail;
@@ -46,28 +47,35 @@ function bookFinder()
         var pageCount = document.createElement("h5");
         pageCount.innerHTML = "Pages :"+book.items[i].volumeInfo.pageCount;
         //create description div
-        var desc = document.createElement("p");
-        desc.innerHTML = book.items[i].volumeInfo.description;
-         desc.style.visibility = "hidden";
+        var desc = document.createElement("span");
+         var descVar = i;
+                 //alert(descVar);
+         desc.setAttribute("id",descVar);
+         desc.className = "popuptext";
+         var descWrapper = document.createElement("div");
+         descWrapper.className = "popup";
+         descWrapper.appendChild(desc);
          //desc.setAttribute("id","Desc"+i);
          //alert(document.getElementById("Desc"+i));
          //showing description on click
-        // WrapperDiv.onclick = function()
-        // {
-        //   //desc.style.visibility = "visible";
-        //   alert("hello");
-        // };
         //adding to DOM
         Div.appendChild(head);
         Div.appendChild(author);
         Div.appendChild(pageCount);
-        Div.appendChild(desc);
+        Div.appendChild(descWrapper);
         WrapperDiv.appendChild(image);
         WrapperDiv.appendChild(Div);
         //document.getElementById(result).appendChild(image);
         var line = document.createElement("hr");
         WrapperDiv.appendChild(line);
         bookResult.appendChild(WrapperDiv);
+
+        WrapperDiv.onclick = function()
+        {
+          console.log(this.children[1].children[3].children[0]);
+          this.children[1].children[3].children[0].innerHTML = book.items[this.children[1].children[3].children[0].id].volumeInfo.description;
+          this.children[1].children[3].children[0].classList.toggle("show");
+        };
 
         //bookResult.appendChild(line);
        }
