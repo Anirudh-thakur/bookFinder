@@ -1,10 +1,9 @@
-var numSubmit = 0;
 function bookFinder()
 {
     //document.getElementById("result").innerHTML = "Result will be displayed here";
     var userInput = document.getElementById("userInput").value; 
   //  alert(userInput);
-   var bookResult = document.getElementById("result") 
+   var bookResult = document.getElementById("result");
    var WrapperDiv;
     //remove existing content on page
     $('#result').html('');
@@ -45,10 +44,7 @@ function bookFinder()
         //book author 
         var author = document.createElement("h5");
         author.innerHTML = "Authors:";
-        for(var j=0;j<book.items[i].volumeInfo.authors.length;j++)
-        {
-          author.innerHTML = author.innerHTML+" "+book.items[i].volumeInfo.authors[j]+",";
-        }
+          author.innerHTML = author.innerHTML+" "+book.items[i].volumeInfo.authors;
 
         //published date
         var publishDate = document.createElement("p");
@@ -68,8 +64,6 @@ function bookFinder()
          descWrapper.appendChild(desc);
          //desc.setAttribute("id","Desc"+i);
          //alert(document.getElementById("Desc"+i));
-
-
          //create preview link 
          var link = document.createElement("a");
          link.href = book.items[i].volumeInfo.previewLink;

@@ -1,8 +1,12 @@
 <div class="container" id="mainContainer">
-    <h1 id="homeHead">Welcome to Book Finder</h1>
-   <!-- <p id="homePara">You can find books here</p>
-    <p>There are lot of books</p> -->
-    <div id="result">
-    </div>
-
+        <h1 id="homeHead">Welcome to Book Finder</h1>
+        <p>You can search for books here, There are lot of books</p> 
+        <form class="form-inline my-2 my-lg-0" onsubmit = " return bookFinder()">
+            <div class="d-flex row" style="margin-left: 2px;">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" id="userInput" style="margin-right: 0%;">
+                    <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            </div>
+        </form>
+        <div id="result">
+        </div>
 </div>
