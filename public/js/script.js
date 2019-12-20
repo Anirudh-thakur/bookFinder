@@ -1,13 +1,14 @@
+var numSubmit = 0;
 function bookFinder()
 {
     //document.getElementById("result").innerHTML = "Result will be displayed here";
     var userInput = document.getElementById("userInput").value; 
   //  alert(userInput);
    var bookResult = document.getElementById("result") 
-
+   var WrapperDiv;
     //remove existing content on page
-   // $(bookResult).remove();
-
+    $('#result').html('');
+    
    //AJAX request to book API
    $.ajax({
      type: "GET",
