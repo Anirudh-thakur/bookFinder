@@ -6,8 +6,6 @@ function bookFinder()
    var bookResult = document.getElementById("result") 
 
     //remove existing content on page
-  //  if(bookResult.hasChildNodes)
-  //     bookResult.removeChild();
 
    //AJAX request to book API
    $.ajax({
