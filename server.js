@@ -15,7 +15,7 @@ app.set('view engine', 'handlebars');
 
 
 //port
-const port = 3000 || process.env.port;
+const port = 3000 || process.env.PORT;
 
 //express static folder
 app.use(express.static('public'));
